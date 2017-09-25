@@ -1,7 +1,4 @@
 box: motemen/golang-goxc
-env:
-GOARCH=arm
-GOOS=linux
 build:
   steps:
     - install-packages: gcc
