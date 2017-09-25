@@ -1,4 +1,4 @@
-box: golang-goxc
+box: golang
 build:
   steps:
     - install-packages: 
