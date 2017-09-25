@@ -1,6 +1,7 @@
 box: golang
 build:
   steps:
+    - setup-go-workspace
     - install-packages: 
       packages: gcc git
     - script:
