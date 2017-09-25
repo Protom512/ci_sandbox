@@ -2,12 +2,11 @@ box: golang
 build:
   steps:
     - install-packages: 
-      packages: gcc
+      packages: gcc git
     - script:
       name: go get
-      code: | 
-        go get github.com/grafana/grafana
-        cd ~/go/src/github.com/grafana/grafana
-        go run build.go setup
-        go run build.go build
+      code: go get github.com/grafana/grafana && cd ~/go/src/github.com/grafana/grafana
+    - script:
+      name: setup and build
+      code: go run build.go setup && go run build.go build
 
