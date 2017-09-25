@@ -4,9 +4,13 @@ build:
     - install-packages: 
       packages: gcc git
     - script:
-      name: go get
-      code: go get github.com/grafana/grafana && cd ~/go/src/github.com/grafana/grafana
+        name: initialize git submodules
+        code: |
+            git submodule update --init --recursive
     - script:
-      name: setup and build
-      code: go run build.go setup && go run build.go build
+        name: go get
+        code: go get -t github.com/grafana/grafana && cd ~/go/src/github.com/grafana/grafana
+    - script:
+        name: setup and build
+        code: go run build.go setup && go run build.go build
 
