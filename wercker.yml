@@ -1,4 +1,4 @@
-box: motemen/golang-goxc@0.2.0
+box: golang-goxc
 build:
   steps:
     - install-packages: 
