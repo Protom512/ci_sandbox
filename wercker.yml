@@ -1,4 +1,7 @@
-box: golang
+box:
+  id: golang
+  ports:
+        - "5000"
 build:
   steps:
     - setup-go-workspace
@@ -8,6 +11,7 @@ build:
         name: go version
         code: |
               go --version
+
         name: go get
         code: |
               git clone https://github.com/grafana/grafana.git 
