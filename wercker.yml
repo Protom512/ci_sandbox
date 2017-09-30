@@ -5,6 +5,9 @@ build:
     - install-packages: 
       packages: gcc git
     - script:
+        name: go version
+        code: |
+              go --version
         name: go get
         code: |
               git clone https://github.com/grafana/grafana.git 
