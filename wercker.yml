@@ -10,7 +10,7 @@ build:
     - script:
         name: go version
         code: |
-              go --version
+              go version
     - script:
         name: go get
         code: |
