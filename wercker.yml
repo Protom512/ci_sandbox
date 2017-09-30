@@ -9,6 +9,7 @@ build:
         code: |
               git clone https://github.com/grafana/grafana.git 
               cd grafana
+              ls -alF
               go run build.go setup 
               go run build.go build
 
