@@ -7,11 +7,8 @@ build:
     - script:
         name: go get
         code: |
-              go get -t github.com/grafana/grafana
-              cd ~/go/src/github.com/grafana/grafana
-    - script:
-        name: setup and build
-        code: |
+              git clone https://github.com/grafana/grafana.git 
+              cd grafana
               go run build.go setup 
               go run build.go build
 
