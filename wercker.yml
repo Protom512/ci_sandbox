@@ -11,7 +11,7 @@ build:
         name: go version
         code: |
               go --version
-
+    - script:
         name: go get
         code: |
               git clone https://github.com/grafana/grafana.git 
